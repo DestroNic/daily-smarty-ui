@@ -11,13 +11,17 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 import "./style/main.scss";
 
 import Home from './components/home';
+import Results from './components/resulsts';
 
 
 function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
-        <Home />
+        <Switch>
+          <Route path='/' component={Home} />
+          <Route path='/results' component={Results} />
+        </Switch>
       </BrowserRouter>
     </Provider>,
     document.querySelector(".app-wrapper")
