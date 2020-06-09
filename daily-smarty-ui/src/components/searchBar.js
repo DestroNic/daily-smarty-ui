@@ -3,7 +3,11 @@ import { Field, reduxForm } from 'redux-form';
 
 class SearchBar extends Component {
    
-   renderInput(field) {
+   handleFormSubmit = function({query}) {
+       console.log(query)
+   }
+    
+    renderInput(field) {
        return <input type="text" placeholder="Search DailySmarty" {...field.input} />
    }
    
@@ -12,7 +16,7 @@ class SearchBar extends Component {
         const { handleSubmit } = this.props
 
         return(
-            <form>
+            <form className="search-bar" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                 <Field name="query" component={this.renderInput} />
             </form>
         )
