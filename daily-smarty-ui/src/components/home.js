@@ -10,8 +10,10 @@ import Logo from './logo';
  class Home extends Component {
   
   handleSearchBarSubmit = function(query) {
-    this.props.fetchPostsWithQuery(query);
-    this.props.history.push('/results');
+    this.props.fetchPostsWithQuery(query, ()=>{
+      this.props.history.push('/results');
+    });
+    
 }
 
   render() {
