@@ -16,11 +16,27 @@ body {
     width: 66vw;
     display: grid;
     align-content: space-around;
-    justify-items: center;
+    // justify-items: stretch;
     margin: auto;
     grid-template-rows: 1fr 2fr 1fr;
 }
 
-$color-gray-one: #666666;
+.logo-main, 
+.recent-posts{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
 
-@import './searchbar'
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+$color-gray-one: #666666;
+$blue-color-one: #0079FF;
+
+@import './searchbar';
+@import './recentPosts';
+@import './results';
