@@ -20,7 +20,7 @@ import Logo from './logo';
     return (
       <div className='home'>
         <Logo />
-        <SearchBar onSubmit={(query) => this.handleSearchBarSubmit(query)} />
+        <SearchBar page="home" onSubmit={(query) => this.handleSearchBarSubmit(query)} />
         <RecentPosts />
       </div>
     );
