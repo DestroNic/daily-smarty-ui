@@ -4,4 +4,58 @@
     display: grid;
     align-content: space-around;
     margin: auto;
+
+    margin-top: 52px;
+    row-gap: 44px;
+}
+
+.results-posts {
+    display: grid;
+    grid-row-gap: 21px;
+
+    .results-posts__wrapper {
+        .results-posts__posts {
+            display: grid;
+            grid-row-gap: 20px;
+            justify-content: stretch;
+        }
+    }
+}
+
+.result-post {
+    display: grid;
+    align-content: space-around;
+    grid-row-gap: 22px;
+
+    .result-post__topics > * {
+        color: $blue-color-one;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: normal;
+    }
+
+    .result-post__title a {
+        color: $color-gray-one;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .result-post__links {
+
+    }
+}
+
+.post-link {
+    min-height: 140px;
+    display: flex;
+    .post-link__box {
+        min-width: 70px;
+        background-color: #b8b8b8;
+        margin-right: 15px;
+    }
+    .post-link__link a {
+        color: $color-gray-one;
+        font-size: 14px;
+        line-height: 17px;
+    }
 }
